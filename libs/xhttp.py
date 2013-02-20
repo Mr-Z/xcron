@@ -13,8 +13,6 @@ class XHttp:
             data = urllib.urlencode(data)
             request = urllib2.Request(url, data, headers)
             url = urllib2.urlopen(request)
-        except urllib2.HTTPError:
-            pass
         except Exception, e:
             print e
             exit()
